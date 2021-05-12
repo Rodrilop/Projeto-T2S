@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Projeto T2S</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="imagens/TruckYellow.png">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+       	<h1 align="center">Criar Nova Movimentacao</h1>
+        <form name="frmMovimentacao" action="insert_mov">
+            <table align="center">
+                <tr>
+                    <td>
+                        <label align="center" class="label">Container</label>
+                        <input type="text" name="container" 
+                               placeholder="TEST1234567" class="Caixa1"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label align="center" class="label">Movimentacao</label>
+                        <select name="movimentacao" class="Caixa1">
+                            <option value="Embarque">Embarque</option>
+                            <option value="Descarga">Descarga</option>
+                            <option value="Gate In">Gate In</option>
+                            <option value="Gate out">Gate out</option>
+                            <option value="Posicionamento Pilha">Posicionamento Pilha</option>
+                            <option value="Pesagem">Pesagem</option>
+                            <option value="Scanner">Scanner</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="label">Data e Hora do Início</label>
+                        <input type="datetime-local" name="data_inicio" class="Caixa1">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="label">Data e Hora do Final</label>
+                        <input type="datetime-local" name="data_final" class="Caixa1">
+                    </td>
+                </tr>
+            </table> 
+            <div align="center">
+                <input type="button" value="Adicionar" class="Botao1"
+                       onclick="validar()">
+            </div>
+        </form>
+        <script src="scripts/validador_mov.js"></script>
+    </body>
+</html>
